@@ -1,0 +1,18 @@
+# Binaries
+bin/
+*.exe
+
+# OS
+.DS_Store
+
+# Go
+vendor/
+*.out
+
+# configs
+configs/.env*
+configs/*.key
+configs/*.pem
+
+# temp
+/tmp/*

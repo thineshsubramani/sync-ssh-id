@@ -1,0 +1,31 @@
+servers:
+  - name: server1
+    host: server1.local
+    ip: 192.168.1.150
+    user: "{{SSH_USER}}"
+    password: "{{SSH_PASS}}"
+    port: "{{SSH_PORT}}"
+    public_key: "~/.ssh/id_rsa.pub"
+    action: "{{ACTION}}"
+
+  - name: server2
+    host: server2.local
+    ip: 192.168.100.99
+    user: "{{SSH_USER}}"
+    password: "{{SSH_PASS}}"
+    port: "{{SSH_PORT}}"
+    public_key: "~/.ssh/id_rsa.pub"
+    action: "{{ACTION}}"
+
+  ## For future development - setup Certificate-based authentication  
+  # - name: myvps
+  #   host: myvps
+  #   ip: 203.0.113.5
+  #   user: root
+  #   public_key: "~/.ssh/id_rsa.pub"
+  #   action: delete
+
+options:
+  reset_knownhost: true
+  backup_authorized_keys: true
+
